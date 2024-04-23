@@ -174,11 +174,20 @@
 						"1": {
 							"name": "keyword.other.special-method.earthfile"
 						},
-						"2": {
+						"3": {
+							"name": "entity.name.type.base-target.earthfile"
+						},
+						"4": {
+							"name": "entity.name.type.base-plus.earthfile"
+						},
+						"5": {
+							"name": "entity.name.type.base-name.earthfile"
+						},
+						"6": {
 							"name": "entity.name.type.base-image.earthfile"
 						}
 					},
-					"match": "(FROM)\\s*([^\\s#]+)"
+					"match": "(FROM)\\s*(([a-zA-Z0-9._\\-/:]*)(\\+)([a-z][a-zA-Z0-9.\\-]*)|([^\\s#]+))"
 				},
 				{
 					"captures": {
@@ -284,8 +293,18 @@
 					"name": "entity.name.variable.artifact.earthfile"
 				},
 				{
-					"match": "([a-zA-Z0-9._\\-/:]*\\+[a-z][a-zA-Z0-9.\\-]*)",
-					"name": "entity.name.type.target.earthfile"
+					"captures": {
+						"1": {
+							"name": "entity.name.type.target-target.earthfile"
+						},
+						"2": {
+							"name": "entity.name.type.target-plus.earthfile"
+						},
+						"3": {
+							"name": "entity.name.type.target.earthfile"
+						}
+					},
+					"match": "([a-zA-Z0-9._\\-/:]*)(\\+)([a-z][a-zA-Z0-9.\\-]*)"
 				},
 				{
 					"captures": {
@@ -302,6 +321,6 @@
 					"match": "([a-zA-Z0-9._\\-/:]*)(\\+)([A-Z][a-zA-Z0-9._]*)"
 				}
 			]
-		},
+		}
 	}
 }
