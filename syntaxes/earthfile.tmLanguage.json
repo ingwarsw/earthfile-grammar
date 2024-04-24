@@ -193,12 +193,9 @@
 					"captures": {
 						"1": {
 							"name": "keyword.other.special-method.earthfile"
-						},
-						"2": {
-							"name": "entity.name.type.tag.earthfile"
 						}
 					},
-					"match": "(FROM|COPY|SAVE ARTIFACT|SAVE IMAGE|RUN|LABEL|EXPOSE|VOLUME|USER|ENV|ARG|BUILD|WORKDIR|ENTRYPOINT|CMD|GIT CLONE|DOCKER LOAD|DOCKER PULL|HEALTHCHECK|WITH DOCKER|END|IF|ELSE IF|ELSE|DO|COMMAND|FUNCTION|IMPORT|LOCALLY|FOR|VERSION|WAIT|TRY|FINALLY|CACHE|HOST|PIPELINE|TRIGGER|PROJECT|SET|LET|ADD|STOP SIGNAL|ONBUILD|SHELL)\\s((--\\w+(?:-\\w+)*\\s*)+)"
+					"match": "(FROM|COPY|SAVE ARTIFACT|SAVE IMAGE|RUN|LABEL|EXPOSE|VOLUME|USER|ENV|ARG|BUILD|WORKDIR|ENTRYPOINT|CMD|GIT CLONE|DOCKER LOAD|DOCKER PULL|HEALTHCHECK|WITH DOCKER|END|IF|ELSE IF|ELSE|DO|COMMAND|FUNCTION|IMPORT|LOCALLY|FOR|VERSION|WAIT|TRY|FINALLY|CACHE|HOST|PIPELINE|TRIGGER|PROJECT|SET|LET|ADD|STOP SIGNAL|ONBUILD|SHELL)\\s"
 				},
 				{
 					"name": "keyword.other.special-method.earthfile",
@@ -289,10 +286,6 @@
 		"entity": {
 			"patterns": [
 				{
-					"match": "([a-zA-Z0-9._\\-/:]*\\+[a-z][a-zA-Z0-9.\\-]*(/\\S*)+)",
-					"name": "entity.name.variable.artifact.earthfile"
-				},
-				{
 					"captures": {
 						"1": {
 							"name": "entity.name.type.target-target.earthfile"
@@ -302,9 +295,12 @@
 						},
 						"3": {
 							"name": "entity.name.type.target.earthfile"
+						},
+						"2": {
+							"name": "entity.name.type.target-file.earthfile"
 						}
 					},
-					"match": "([a-zA-Z0-9._\\-/:]*)(\\+)([a-z][a-zA-Z0-9.\\-]*)"
+					"match": "([a-zA-Z0-9._\\-/:]*)(\\+)([a-z][a-zA-Z0-9.\\-]*)(/\\S*)+"
 				},
 				{
 					"captures": {
